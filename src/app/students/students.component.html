@@ -1,0 +1,29 @@
+<div class="alert alert-dark">Home</div>
+<div class="card">
+    <div class="card-header">
+        <span><i class="fas fa-table"></i></span>
+        List of Students
+    </div>
+    <div class="card-body">
+        <form action="" class="form-inline">
+            <input type="text" class="form-control" placeholder="Search for...">
+            <a href="#" class="btn btn-primary"><i class="fas fa-search"></i></a>
+        </form>
+        <table class="table table-bordered mt-1">
+            <thead>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Enroll Date</th>
+                <th>Action</th>
+            </thead>
+            <tbody>
+                <tr *ngFor='let student of listStudents'>
+                    <td>{{ student.firstName }}</td>
+                    <td>{{ student.lastName }}</td>
+                    <td>{{ student.enrollmentDate | date:"dd/MM/yyyy" }}</td>
+                    <td><i class="fas fa-info-circle text-primary mr-1"></i><i class="far fa-trash-alt"></i></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>

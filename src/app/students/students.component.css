@@ -1,0 +1,13 @@
+.form-control{
+    border-bottom-right-radius:  0% !important;
+    border-top-right-radius:  0% !important;
+    margin-right: 0;
+}
+.btn.btn-primary {
+    margin-left: 0;
+    border-top-left-radius:  0% !important;
+    border-bottom-left-radius:  0% !important;
+}
+.table {
+    text-align: center;
+}
