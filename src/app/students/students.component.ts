@@ -10,8 +10,18 @@ import { students } from '../students'
   styleUrls: ['./students.component.css']
 })
 export class StudentsComponent implements OnInit {
+  config: any;
+  constructor() {
+    this.config = {
+        itemsPerPage: 3,
+        currentPage: 1,
+        totalItems: this.listStudents.length
+    };
+  }
 
-  constructor() { }
+  pageChanged(event){
+    this.config.currentPage = event;
+  }
   searchText
   listStudents = []
   onDeleteStudent(id) {
@@ -24,7 +34,13 @@ export class StudentsComponent implements OnInit {
     }
   }
 
+  pageOfItems: Array<any>;
   ngOnInit() {
-    this.listStudents = [...students]
+    this.listStudents = students.map((student, i) => (student));
   }
+
+  onChangePage(pageOfItems: Array<any>) {
+    // update current page of items
+    pageOfItems = pageOfItems;
+}
 }
