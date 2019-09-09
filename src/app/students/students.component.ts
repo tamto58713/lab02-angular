@@ -13,8 +13,18 @@ export class StudentsComponent implements OnInit {
 
   constructor() { }
 
-  listStudents = [...students]
-  ngOnInit() {
+  listStudents = []
+  onDeleteStudent(id) {
+    let isDelete = confirm("Are you sure delete this student?")
+    if (isDelete) {
+      let temp = this.listStudents.filter(student => {
+        return student.id !== id
+      })
+      this.listStudents = [...temp]
+    }
   }
 
+  ngOnInit() {
+    this.listStudents = [...students]
+  }
 }

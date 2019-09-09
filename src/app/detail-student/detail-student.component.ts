@@ -12,6 +12,7 @@ import { enrollments } from '../enrollments'
 export class DetailStudentComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private location: Location) { }
+
   student
   courses = {}
   enrollments

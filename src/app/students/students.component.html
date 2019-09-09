@@ -1,4 +1,4 @@
-<div class="alert alert-dark">Home</div>
+<div class="alert alert-dark">Home / <span><a routerLink="/">student</a></span></div>
 <div class="card">
     <div class="card-header">
         <span><i class="fas fa-table"></i></span>
@@ -16,14 +16,24 @@
                 <th>Enroll Date</th>
                 <th>Action</th>
             </thead>
-            <tbody>
+            <tbody  *ngIf="listStudents.length > 0; else nothing"> 
                 <tr *ngFor='let student of listStudents'>
                     <td>{{ student.firstName }}</td>
                     <td>{{ student.lastName }}</td>
                     <td>{{ student.enrollmentDate | date:"dd/MM/yyyy" }}</td>
-                    <td><a [routerLink]="['/student', student.id]"><i class="fas fa-info-circle text-primary mr-1"></i></a><i class="far fa-trash-alt"></i></td>
+                    <td>
+                        <a [routerLink]="['/student', student.id]">
+                            <i class="fas fa-info-circle text-primary mr-1"></i>
+                        </a>
+                        <i class="far fa-trash-alt" (click)="onDeleteStudent(student.id)"></i>
+                    </td>
                 </tr>
             </tbody>
+            <ng-template #nothing>
+                <tr>
+                    <td colspan="4">Nothing...</td>
+                </tr>
+            </ng-template>
         </table>
     </div>
   </div>
