@@ -12,7 +12,7 @@ import { students } from '../students'
 export class StudentsComponent implements OnInit {
 
   constructor() { }
-
+  searchText
   listStudents = []
   onDeleteStudent(id) {
     let isDelete = confirm("Are you sure delete this student?")
