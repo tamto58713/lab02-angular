@@ -6,7 +6,7 @@
     </div>
     <div class="card-body">
         <form action="" class="form-inline">
-            <input type="text" class="form-control" placeholder="Search for...">
+            <input type="text" class="form-control" placeholder="Search for..." name="search"  [(ngModel)]="searchText">
             <a href="#" class="btn btn-primary"><i class="fas fa-search"></i></a>
         </form>
         <table class="table table-bordered mt-1">
@@ -17,7 +17,7 @@
                 <th>Action</th>
             </thead>
             <tbody  *ngIf="listStudents.length > 0; else nothing"> 
-                <tr *ngFor='let student of listStudents'>
+                <tr *ngFor='let student of listStudents | filter:searchText'>
                     <td>{{ student.firstName }}</td>
                     <td>{{ student.lastName }}</td>
                     <td>{{ student.enrollmentDate | date:"dd/MM/yyyy" }}</td>
