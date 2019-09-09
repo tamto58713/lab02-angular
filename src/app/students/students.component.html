@@ -17,7 +17,7 @@
                 <th>Action</th>
             </thead>
             <tbody  *ngIf="listStudents.length > 0; else nothing"> 
-                <tr *ngFor='let student of listStudents | filter:searchText'>
+                <tr *ngFor='let student of listStudents | paginate: config | filter:searchText'>
                     <td>{{ student.firstName }}</td>
                     <td>{{ student.lastName }}</td>
                     <td>{{ student.enrollmentDate | date:"dd/MM/yyyy" }}</td>
@@ -35,5 +35,14 @@
                 </tr>
             </ng-template>
         </table>
+    </div>
+    <div class="card-footer pb-0">
+        <div class="row">
+                <div class="col-sm-3">
+                        showing {{config.currentPage}} of {{listStudents.length/config.itemsPerPage | number:"1.0-0" }}
+                </div>
+                <pagination-controls (pageChange)="pageChanged($event)" class="col-sm-7 offset-sm-2"></pagination-controls>
+        </div>
+        
     </div>
   </div>

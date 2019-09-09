@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { StudentsComponent } from './students/students.component';
 import { DetailStudentComponent } from './detail-student/detail-student.component';
 import { WrongPathComponent } from './wrong-path/wrong-path.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { WrongPathComponent } from './wrong-path/wrong-path.component';
     BrowserModule,
     AppRoutingModule,
     Ng2SearchPipeModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
