@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { StudentsComponent } from './lab02/students/students.component'
 import { DetailStudentComponent} from './lab02/detail-student/detail-student.component'
-import { WrongPathComponent } from './lab02/wrong-path/wrong-path.component'
+import { WrongPathComponent } from './wrong-path/wrong-path.component'
 import { Exercise01Component } from './lab01/exercise01/exercise01.component';
 import { Exercise02Component } from './lab01/exercise02/exercise02.component';
 import { Exercise03Component } from './lab01/exercise03/exercise03.component';

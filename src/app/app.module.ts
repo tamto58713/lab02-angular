@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StudentsComponent } from './lab02/students/students.component';
 import { DetailStudentComponent } from './lab02/detail-student/detail-student.component';
-import { WrongPathComponent } from './lab02/wrong-path/wrong-path.component';
+import { WrongPathComponent } from './wrong-path/wrong-path.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { RatingModule } from 'ng-starrating'
 import { HomePageComponent } from './lab01/home-page/home-page.component';
