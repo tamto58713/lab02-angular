@@ -20,6 +20,8 @@ import { Exercise04DetailProductComponent } from './lab01/exercise04-detail-prod
 import { Exercise05Component } from './lab01/exercise05/exercise05.component';
 import { NavHeaderExercise03Component } from './lab01/nav-header-exercise03/nav-header-exercise03.component';
 import { NavChangeExerciseComponent } from './lab01/nav-change-exercise/nav-change-exercise.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +38,9 @@ import { NavChangeExerciseComponent } from './lab01/nav-change-exercise/nav-chan
     Exercise04DetailProductComponent,
     Exercise05Component,
     NavHeaderExercise03Component,
-    NavChangeExerciseComponent
+    NavChangeExerciseComponent,
+    HomeComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

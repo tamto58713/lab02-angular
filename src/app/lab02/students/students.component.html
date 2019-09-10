@@ -22,7 +22,7 @@
                     <td>{{ student.lastName }}</td>
                     <td>{{ student.enrollmentDate | date:"dd/MM/yyyy" }}</td>
                     <td>
-                        <a [routerLink]="['/lab02   /student', student.id]">
+                        <a [routerLink]="['/lab02/student', student.id]">
                             <i class="fas fa-info-circle text-primary mr-1"></i>
                         </a>
                         <i class="far fa-trash-alt" (click)="onDeleteStudent(student.id)"></i>

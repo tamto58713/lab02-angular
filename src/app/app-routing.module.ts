@@ -7,15 +7,15 @@ import { Exercise01Component } from './lab01/exercise01/exercise01.component';
 import { Exercise02Component } from './lab01/exercise02/exercise02.component';
 import { Exercise03Component } from './lab01/exercise03/exercise03.component';
 import { Exercise03CartComponent } from './lab01/exercise03-cart/exercise03-cart.component';
-import { NavChangeExerciseComponent } from './lab01/nav-change-exercise/nav-change-exercise.component';
-import { NavHeaderExercise03Component } from './lab01/nav-header-exercise03/nav-header-exercise03.component';
 import { HomePageComponent } from './lab01/home-page/home-page.component';
 import { Exercise05Component } from './lab01/exercise05/exercise05.component';
 import { Exercise04Component } from './lab01/exercise04/exercise04.component';
 import { Exercise04DetailProductComponent } from './lab01/exercise04-detail-product/exercise04-detail-product.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
 const routes: Routes = [
-  { path: '', component: HomePageComponent},
+  { path: '', component: HomeComponent},
+  { path: 'about', component: AboutComponent},
   { path: 'lab01', component: HomePageComponent},
   { path: 'lab01/exercise/1', component: Exercise01Component},
   { path: 'lab01/exercise/2', component: Exercise02Component},

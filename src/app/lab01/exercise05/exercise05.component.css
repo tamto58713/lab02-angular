@@ -1,9 +1,10 @@
 .side-bar {
     background-color: #ccc;
-    height: 100vh;
+    height: auto;
     z-index: 0;
     position: sticky; 
     top: 50px;
+    min-height: 500px;
 }
 .btn-toggle span {
     background-color: #000;    
@@ -62,18 +63,19 @@ span:before .acitve{
 }
 .content {
     position: relative;
-    background: #fff;
+    background: rgba(243, 243, 243, .5);
     margin-top: 20px;
+    left: 27px;
 }
 .add-employee {
     position: absolute;
-    right: -60px;
+    right: 0px;
 }
 
 .table {
-    position: absolute;
     text-align: center;
-    right: -40px;
+    vertical-align: middle;
+    right: 0;
 }
 .table td {
     vertical-align: middle;

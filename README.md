@@ -1,27 +1,26 @@
-# Lab02Angular
+  # Lab02-Angular
+  You can try it  
+  [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://lab02-angular.herokuapp.com/)
+  ## Getting Started   
+  ### Prequisites
+  You need git to clone the `Lab02-Angular` respository. You can get git from [here](https://github.com/tamto58713/Lab02-Angular.git).  
+  You must have NodeJs and its package manager (npm) installed. You can get them from [here](https://nodejs.org).
+  ### Clone `Lab02-Angular`
+  Clone the `Lab02-Angular` respository using git: 
+  ```
+  git clone https://github.com/tamto58713/Lab02-Angular.git
+  cd Lab02-Angular
+  ```
+  ### Install Dependencies
+  ```
+  npm install
+  ```
+  ### Run the Application
+  ```
+  npm start
+  ```
+  Go to your browser and type http://localhost:8080/. You can now see that app is up and running.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.3.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+  ### Author
+  Tam To Tran  
+  Email: tamtotran5667@gmail.com

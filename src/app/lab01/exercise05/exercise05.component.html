@@ -23,7 +23,7 @@
             </div>
     </div>
     <div class="col-sm-9 content">
-        <div class="route"><a routerLink="/exercise/5">items</a> / item </div>
+        <div class="route"><a routerLink="/lab01/exercise/5">items</a> / item </div>
             <nav class="navbar navbar-expand-lg navbar-light bg-light nav-ex5">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -43,10 +43,10 @@
                 </div>
                 <div class="collapse navbar-collapse ml-3" id="navbarSupportedContent">
                     <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="search" [(ngModel)]="searchText">
                     </form>
                 </div>
-                <button class="btn btn-primary add-employee"> + Add Employee </button>
+                <button class="btn btn-primary add-employee">+ Add Employee</button>
             </nav>
             <table class="table table-bordered">
                 <thead>
@@ -56,18 +56,22 @@
                     <th>Email</th>
                     <th>Action</th>
                 </thead>
-                <tbody *ngFor='let employee of listEmployees'>
+                <tbody *ngFor='let employee of listEmployees | paginate: config | filter:searchText'>
                     <tr>
                         <td>{{ employee.id }}</td>
                         <td>{{ employee.firstName }}</td>
                         <td>{{ employee.lastName }}</td>
                         <td>{{ employee.email }}</td>
                         <td>
-                            action
+                           <form action="" class="form-inline">
+                               <button class="btn btn-primary btn-sm">View</button>
+                               <button class="btn btn-danger btn-sm">Delete</button>
+                           </form>
                         </td>
                     </tr>
                 </tbody>
             </table>
+            <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
     </div>
 </div>
 
