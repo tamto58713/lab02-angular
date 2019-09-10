@@ -1,0 +1,15 @@
+.my-name {
+    font-weight: bold;
+}
+.card-body {
+    background: #ccc;
+}
+.card {
+    border: none;
+    margin-top: 2px;
+}
+.info {
+    display: table;
+    margin: 30px;
+    line-height: 50px;
+}
