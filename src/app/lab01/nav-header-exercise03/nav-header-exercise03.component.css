@@ -1,0 +1,8 @@
+#nav-header {
+    position: -webkit-sticky;
+    position: sticky;  
+    z-index: 1;
+    height: 50px;
+    width: 80%;
+    top: 92px;
+}

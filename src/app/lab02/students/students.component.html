@@ -1,4 +1,4 @@
-<div class="alert alert-dark">Home / <span><a routerLink="/">student</a></span></div>
+<div class="alert alert-secondary mt-1">Home / <span><a routerLink="/lab02">student</a></span></div>
 <div class="card">
     <div class="card-header">
         <span><i class="fas fa-table"></i></span>
@@ -9,7 +9,7 @@
             <input type="text" class="form-control" placeholder="Search for..." name="search"  [(ngModel)]="searchText">
             <a href="#" class="btn btn-primary"><i class="fas fa-search"></i></a>
         </form>
-        <table class="table table-bordered mt-1">
+        <table class="table table-bordered mt-1 table-responsive-sm">
             <thead>
                 <th>First Name</th>
                 <th>Last Name</th>
@@ -22,7 +22,7 @@
                     <td>{{ student.lastName }}</td>
                     <td>{{ student.enrollmentDate | date:"dd/MM/yyyy" }}</td>
                     <td>
-                        <a [routerLink]="['/student', student.id]">
+                        <a [routerLink]="['/lab02   /student', student.id]">
                             <i class="fas fa-info-circle text-primary mr-1"></i>
                         </a>
                         <i class="far fa-trash-alt" (click)="onDeleteStudent(student.id)"></i>

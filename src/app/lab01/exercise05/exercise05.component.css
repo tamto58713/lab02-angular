@@ -1,0 +1,83 @@
+.side-bar {
+    background-color: #ccc;
+    height: 100vh;
+    z-index: 0;
+    position: sticky; 
+    top: 50px;
+}
+.btn-toggle span {
+    background-color: #000;    
+    display:block;
+    width:30px;
+    height:5px;
+    position: absolute;
+    top:20px;
+    right: 10px;   
+}
+
+.btn-toggle span:after {
+    content: "";
+    background-color: #000;    
+    display:block;
+    width:30px;
+    height:5px;
+    position: absolute;
+    top:10px;  
+}
+.btn-toggle span:before {
+    content: "";
+    background-color: #000;    
+    display:block;
+    width:30px;
+    height:5px;
+    position: absolute;
+    top: -10px;  
+}
+
+span .active {
+    display: none !important;
+}
+span:before .acitve{
+    transform: rotate(45deg)
+}
+
+.user-img {
+    display: block;
+    top: 50px;
+    position: absolute;
+    left: 94px;
+}
+.list-group {
+    top: 150px;
+    display: block;
+    position: absolute;
+}
+
+.list-group-item, .list-group-item-action {
+    background-color: #ccc !important;
+    border: none;
+    color: #000;
+    margin-bottom: 0 !important;
+    padding: 7px !important;
+}
+.content {
+    position: relative;
+    background: #fff;
+    margin-top: 20px;
+}
+.add-employee {
+    position: absolute;
+    right: -60px;
+}
+
+.table {
+    position: absolute;
+    text-align: center;
+    right: -40px;
+}
+.table td {
+    vertical-align: middle;
+}
+.nav-ex5 {
+    background: #ccc;
+}

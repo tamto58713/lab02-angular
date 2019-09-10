@@ -1,0 +1,8 @@
+.header {
+    position: -webkit-sticky;
+    position: sticky;   
+    z-index: 1;
+    opacity: 1;
+    top: 50px;
+    background-color: rgb(243, 243, 243) !important;
+}

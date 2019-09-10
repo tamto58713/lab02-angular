@@ -1,0 +1,73 @@
+<div class="detail"  *ngIf="product"> 
+        <div class="card">
+                <div class="card-header alert alert-primary">
+                        <strong>{{ product.productName }}</strong>
+                </div>
+                <div class="card-body row">
+                    <div class="content col-sm-5">
+                        <div class="name row">
+                            <div class="col-sm-5">
+                                Name:
+                            </div>
+                            <div class="col-sm-5">
+                                {{ product.productName }}
+                            </div>
+                        </div>
+                        <div class="code row">
+                                <div class="col-sm-5">
+                                    Code:
+                                </div>
+                                <div class="col-sm-5">
+                                    {{ product.productCode }}
+                                </div>
+                        </div>
+                        <div class="description row">
+                                <div class="col-sm-5">
+                                    Description:
+                                </div>
+                                <div class="col-sm-5">
+                                    {{ product.description }}
+                                </div>
+                        </div>
+                        <div class="availability row">
+                                <div class="col-sm-5">
+                                    Availability:
+                                </div>
+                                <div class="col-sm-5">
+                                    {{ product.releaseDate }}
+                                </div>
+                        </div>
+                        <div class="price row">
+                                <div class="col-sm-5">
+                                    Name:
+                                </div>
+                                <div class="col-sm-5">
+                                    {{ product.price }}
+                                </div>
+                        </div>
+                        <div class="starRating row">
+                                <div class="col-sm-5">
+                                    5 Star Rating:
+                                </div>
+                                <div class="col-sm-5">
+                                    {{ product.starRating }}
+                                </div>
+                        </div>
+    
+    
+    
+                    </div>
+                    <div class="img col-sm-5 offset-sm-2">
+                        <img [src]="product.imageUrl" alt="" width="250px" height="250px">
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a routerLink="/lab01/exercise/4/">
+                        <strong>
+                            <span style="font-size: 25px;">&#x2190;</span>
+                            Back
+                        </strong>
+                        </a>
+                </div>
+        </div>
+    </div>
