@@ -4,24 +4,47 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter'
 import {FormsModule } from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { StudentsComponent } from './students/students.component';
-import { DetailStudentComponent } from './detail-student/detail-student.component';
-import { WrongPathComponent } from './wrong-path/wrong-path.component';
+import { StudentsComponent } from './lab02/students/students.component';
+import { DetailStudentComponent } from './lab02/detail-student/detail-student.component';
+import { WrongPathComponent } from './lab02/wrong-path/wrong-path.component';
 import {NgxPaginationModule} from 'ngx-pagination';
-
+import { RatingModule } from 'ng-starrating'
+import { HomePageComponent } from './lab01/home-page/home-page.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { Exercise01Component } from './lab01/exercise01/exercise01.component';
+import { Exercise02Component } from './lab01/exercise02/exercise02.component';
+import { Exercise03CartComponent } from './lab01/exercise03-cart/exercise03-cart.component';
+import { Exercise03Component } from './lab01/exercise03/exercise03.component';
+import { Exercise04Component } from './lab01/exercise04/exercise04.component';
+import { Exercise04DetailProductComponent } from './lab01/exercise04-detail-product/exercise04-detail-product.component';
+import { Exercise05Component } from './lab01/exercise05/exercise05.component';
+import { NavHeaderExercise03Component } from './lab01/nav-header-exercise03/nav-header-exercise03.component';
+import { NavChangeExerciseComponent } from './lab01/nav-change-exercise/nav-change-exercise.component';
 @NgModule({
   declarations: [
     AppComponent,
     StudentsComponent,
     DetailStudentComponent,
-    WrongPathComponent
+    WrongPathComponent,
+    HomePageComponent,
+    NavBarComponent,
+    Exercise01Component,
+    Exercise02Component,
+    Exercise03CartComponent,
+    Exercise03Component,
+    Exercise04Component,
+    Exercise04DetailProductComponent,
+    Exercise05Component,
+    NavHeaderExercise03Component,
+    NavChangeExerciseComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     Ng2SearchPipeModule,
     FormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    RatingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

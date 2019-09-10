@@ -1,13 +1,32 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { StudentsComponent } from './students/students.component'
-import { DetailStudentComponent} from './detail-student/detail-student.component'
-import { WrongPathComponent } from './wrong-path/wrong-path.component'
-
+import { StudentsComponent } from './lab02/students/students.component'
+import { DetailStudentComponent} from './lab02/detail-student/detail-student.component'
+import { WrongPathComponent } from './lab02/wrong-path/wrong-path.component'
+import { Exercise01Component } from './lab01/exercise01/exercise01.component';
+import { Exercise02Component } from './lab01/exercise02/exercise02.component';
+import { Exercise03Component } from './lab01/exercise03/exercise03.component';
+import { Exercise03CartComponent } from './lab01/exercise03-cart/exercise03-cart.component';
+import { NavChangeExerciseComponent } from './lab01/nav-change-exercise/nav-change-exercise.component';
+import { NavHeaderExercise03Component } from './lab01/nav-header-exercise03/nav-header-exercise03.component';
+import { HomePageComponent } from './lab01/home-page/home-page.component';
+import { Exercise05Component } from './lab01/exercise05/exercise05.component';
+import { Exercise04Component } from './lab01/exercise04/exercise04.component';
+import { Exercise04DetailProductComponent } from './lab01/exercise04-detail-product/exercise04-detail-product.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 const routes: Routes = [
-  { path: '', component: StudentsComponent},
-  { path: 'student/:id', component: DetailStudentComponent},
-  { path: "**", component: WrongPathComponent}
+  { path: '', component: HomePageComponent},
+  { path: 'lab01', component: HomePageComponent},
+  { path: 'lab01/exercise/1', component: Exercise01Component},
+  { path: 'lab01/exercise/2', component: Exercise02Component},
+  { path: 'lab01/exercise/3', component: Exercise03Component},
+  { path: 'lab01/exercise/3/cart', component: Exercise03CartComponent},
+  { path: 'lab01/exercise/4', component: Exercise04Component},
+  { path: 'lab01/exercise/4/products/:productId', component: Exercise04DetailProductComponent},
+  { path: 'lab01/exercise/5', component: Exercise05Component},
+  { path: 'lab02', component: StudentsComponent},
+  { path: 'lab02/student/:id', component: DetailStudentComponent},
+  { path: '**', component: WrongPathComponent}
 ];
 
 @NgModule({

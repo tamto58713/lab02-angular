@@ -1,0 +1,23 @@
+<app-nav-change-exercise></app-nav-change-exercise>
+<table class="table table-bordered"> 
+    <thead>
+        <th>Image</th>
+        <th>Full Name</th>
+        <th>Birthday</th>
+        <th>Gender</th>
+        <th>Mark</th>
+    </thead>
+    <tbody *ngFor='let student of students'>
+        <tr>
+            <td style="display:inline-block; vertical-align:middle">
+                <img [src]='student.imageUrl' alt="" width="150px" height="150px    ">
+            </td>
+            <td >{{ student.name }}</td>
+            <td>{{ student.birthday }}</td>
+            <td>{{ student.gender }}</td>
+            <td>{{ student.mark }}</td>
+
+
+        </tr>
+    </tbody>
+</table>

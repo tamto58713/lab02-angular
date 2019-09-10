@@ -1,0 +1,15 @@
+.teo {
+    margin: 0 auto;
+    width: 450px;
+    height: 450px;
+    background: #ddd;
+    margin-top: 42px;
+}
+.info {
+    text-align: left;    
+    background: #fff;
+}
+img {
+    margin-top: 5px;
+    margin-left: 5px;
+}

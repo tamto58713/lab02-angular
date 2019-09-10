@@ -1,0 +1,40 @@
+<app-nav-change-exercise></app-nav-change-exercise>
+<app-nav-header-exercise03></app-nav-header-exercise03>
+<div class="ex3">
+    <h6><b>YOUR CART</b></h6>
+    <table class="table table-bordered text-center mt-2">
+        <thead>
+            <th>ID</th>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Action</th>
+        </thead>
+        <tbody *ngFor="let product of products">
+            <tr>
+                <td>{{ product.id }}</td>
+                <td>
+                    <img [src]="product.image" alt="" width="70px" height="70px">
+                </td>
+                <td valign="baseline">{{ product.name }}</td>
+                <td>{{ product.price | currency:"VND"}}</td>
+                
+                <td>{{ quantities[product.id] }}
+                    <div class="btn-group ml-3">
+                        <button class="btn btn-success" (click)="onIncreaseQuantities(product.id)">+</button>
+                        <button class="btn btn-danger" (click)="onDecreaseQuantities(product.id)">-</button>
+                    </div>
+                </td>
+                <td>
+                    <button class="btn btn-primary">View</button>
+                    <button class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+            <tr>
+                <td>Total Price</td>
+                <td colspan="5" style="text-align: right">{{ totalPrice() | currency:"VND" }}</td>
+            </tr>
+    </table>
+</div>
