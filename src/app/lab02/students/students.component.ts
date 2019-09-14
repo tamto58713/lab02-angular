@@ -11,6 +11,16 @@ import { students } from '../students'
 })
 export class StudentsComponent implements OnInit {
   config: any;
+  public autoHide: boolean = false;
+  public responsive: boolean = true;
+  public labels: any = {
+      previousLabel: '←',
+      nextLabel: '→',
+      screenReaderPaginationLabel: 'Pagination',
+      screenReaderPageLabel: 'page',
+      screenReaderCurrentLabel: `You're on page`
+  };
+  
   constructor() {
     this.config = {
         itemsPerPage: 3,

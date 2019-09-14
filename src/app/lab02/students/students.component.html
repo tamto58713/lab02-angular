@@ -41,7 +41,15 @@
                 <div class="col-sm-3">
                         showing {{config.currentPage}} of {{listStudents.length/config.itemsPerPage | number:"1.0-0" }}
                 </div>
-                <pagination-controls (pageChange)="pageChanged($event)" class="col-sm-7 offset-sm-2"></pagination-controls>
+                <pagination-controls 
+                         [autoHide]="autoHide"
+                         [responsive]="responsive"
+                         [previousLabel]="labels.previousLabel"
+                         [nextLabel]="labels.nextLabel"
+                         [screenReaderPaginationLabel]="labels.screenReaderPaginationLabel"
+                         [screenReaderPageLabel]="labels.screenReaderPageLabel"
+                         [screenReaderCurrentLabel]="labels.screenReaderCurrentLabel"
+                (pageChange)="pageChanged($event)" class="col-sm-7 offset-sm-2"></pagination-controls>
         </div>
         
     </div>
