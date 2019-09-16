@@ -13,6 +13,8 @@ import { Exercise04Component } from './lab01/exercise04/exercise04.component';
 import { Exercise04DetailProductComponent } from './lab01/exercise04-detail-product/exercise04-detail-product.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { HomeLab03Component } from './lab03/home-lab03/home-lab03.component';
+import { DatailProductComponent} from './lab03/datail-product/datail-product.component'
 const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'about', component: AboutComponent},
@@ -26,6 +28,8 @@ const routes: Routes = [
   { path: 'lab01/exercise/5', component: Exercise05Component},
   { path: 'lab02', component: StudentsComponent},
   { path: 'lab02/student/:id', component: DetailStudentComponent},
+  { path: 'lab03', component: HomeLab03Component},
+  { path: 'lab03/product/:id', component: DatailProductComponent},
   { path: '**', component: WrongPathComponent}
 ];
 

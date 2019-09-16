@@ -22,6 +22,10 @@ import { NavHeaderExercise03Component } from './lab01/nav-header-exercise03/nav-
 import { NavChangeExerciseComponent } from './lab01/nav-change-exercise/nav-change-exercise.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { NavLab03Component } from './lab03/nav-lab03/nav-lab03.component';
+import { HomeLab03Component } from './lab03/home-lab03/home-lab03.component';
+import { DatailProductComponent } from './lab03/datail-product/datail-product.component';
+import { SideBarLab03Component } from './lab03/side-bar-lab03/side-bar-lab03.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +44,11 @@ import { AboutComponent } from './about/about.component';
     NavHeaderExercise03Component,
     NavChangeExerciseComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    NavLab03Component,
+    HomeLab03Component,
+    DatailProductComponent,
+    SideBarLab03Component
   ],
   imports: [
     BrowserModule,

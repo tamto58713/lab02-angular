@@ -1,0 +1,14 @@
+<div class="row mt-4">
+    <div class="col-sm-3">
+        <img [src]="product.imageUrl" alt="">
+    </div>
+    <div class="col-sm-8 offset-sm-1">
+        <div><span><strong>Name: </strong></span>{{ product.name }}</div>
+        <div><span><strong>Price: </strong></span>{{ product.price }}</div>
+        <div><span><strong>Company: </strong></span>{{ product.company }}</div>
+        <div><span><strong>Species: </strong></span>{{ product.species }}</div>
+        <div><span><strong>New product (...) </strong></span></div>
+        <div><span><strong>remain: </strong></span>{{ product.amount }}</div>
+        <div><span><strong>Sales: </strong></span>{{ product.sales * 100 }}% </div>
+    </div>
+</div>
