@@ -1,1 +1,47 @@
 <app-change-ex-lab05></app-change-ex-lab05>
+<div class="card" style="width: 18rem; margin-top: 15px">
+    <div class="card-header">
+      Calculating reward for TET
+    </div>
+    <div class="card-body">
+        <form  (ngSubmit)="onSubmit()"  >
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="name" class="form-control" [(ngModel)]="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="salary">Salary</label>
+                <input type="text" id="salary" name="salary" class="form-control" [(ngModel)]="salary" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fullName">Gender</label>
+                <div class="input-group">
+                    <input type="radio"  name="gender" (change)="onChangeGender(1)">
+                    <label class="ml-3" for="">Male</label>
+                    <input type="radio" class="ml-5" name="gender"  (change)="onChangeGender(0)"> 
+                    <label class="ml-3" for="">Female</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Group Age</label>
+                    <select class="form-control" name="group-age" [(ngModel)]="groupAge">
+                        <option value="1">Under 25 Years old</option>
+                        <option value="2">25 - 40 Years old</option>
+                        <option value="3">Above 40 Years old</option>
+                    </select>
+                </div>
+        </form>
+    </div>
+
+    <div class="card-footer">
+        REWARD: 
+        <span *ngIf="!salary">0</span>
+        <span *ngIf="salary && !groupAge">{{ salary | currency:"VND" }}</span>
+        <span *ngIf="groupAge === '1'">{{ salary * 1.7 | currency:"VND" }}</span>
+        <span *ngIf="groupAge === '2'">{{ salary * 2 | currency:"VND" }}</span>
+        <span *ngIf="groupAge === '3'">{{ salary * 2.5 | currency:"VND" }}</span>
+    </div>
+  </div>

@@ -12,4 +12,11 @@ export class Sen2Component implements OnInit {
   ngOnInit() {
   }
 
+  name
+  salary
+  gender
+  groupAge
+  onChangeGender(gender) {
+    this.gender = gender
+  }
 }
