@@ -1,1 +1,36 @@
 <app-change-ex-lab05></app-change-ex-lab05>
+<div class="card" style="margin-top: 15px">
+    <div class="card-header">
+      SELL BEVERAGE
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <th>Name</th>
+                <th>Quantity</th> 
+                <th>Price</th>
+                <th>Subtotal</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of products">
+                    <td>
+                        <input type="checkbox" [(ngModel)]="checked[product.id]">
+                    </td>
+                    <td>
+                        <input [disabled]="!checked[product.id]" [id]="product.id" type="text" [(ngModel)]="quantity[product.id]"  (input)="onChange(product.id)">
+                    </td>
+                    <td>
+                        {{ product.price | currency:"VND" }}
+                    </td>
+                    <td>
+                        {{ product.price * quantity[product.id] | currency:"VND" }}
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+    <div class="card-footer">
+        Grand Total: {{ total | currency:"VND"}}
+  </div>
