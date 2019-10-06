@@ -45,7 +45,7 @@
 
     <div class="card-footer">
         REWARD: 
-        <span *ngIf="!salary">{{ 0 | currency:"VND"}}</span>
+        <span *ngIf="!salary && !groupAge">{{ 0 | currency:"VND"}}</span>
         <span *ngIf="salary && !groupAge">{{ salary | currency:"VND" }}</span>
         <span *ngIf="groupAge === '1'">{{ salary * 1.7 | currency:"VND" }}</span>
         <span *ngIf="groupAge === '2'">{{ salary * 2 | currency:"VND" }}</span>
