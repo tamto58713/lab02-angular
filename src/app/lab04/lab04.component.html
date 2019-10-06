@@ -1,0 +1,33 @@
+<div class="card mt-2">
+        <div class="card-header" style="text-transform: uppercase">
+          List Product
+        </div>
+        <div class="card-body">
+          <table class="table">
+            <thead class="text-primary" style="text-transform: uppercase">
+              <th [ngClass]="{'active': orderName === 'name'}" style="cursor: pointer" (click)="changeOrderBy('name')">Products</th>
+              <th [ngClass]="{'active': orderName === 'price'}" style="cursor: pointer" (click)="changeOrderBy('price')" >Price</th>
+              <th [ngClass]="{'active': orderName === 'discount'}" style="cursor: pointer" (click)="changeOrderBy('discount')" >Sales</th>
+              <th [ngClass]="{'active': orderName === 'date'}" style="cursor: pointer" (click)="changeOrderBy('date')" >Date</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let product of listProducts | orderBy: orderName:'0' | paginate:config">
+                <td style="text-transform: uppercase">{{ product.name }}</td>
+                <td>{{ product.price | currency }}</td>
+                <td>{{ product.discount * 100 }}%</td>
+                <td>{{ product.date | date:"MMMM-dd, yyyy"}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card-footer text-center">
+          <div class="text-left">
+            <!-- Page: {{ config.currentPage | number:"1.0-0"}} -->
+            Page: {{ ceil(config.currentPage) }}
+              </div>
+              <i [ngClass]="{'disable': ceil(config.currentPage) === 1}" style="font-size: 30px; color: #a5f; margin: 0 15px" class="fas fa-hand-point-up" (click)="onGetFirstPage()"></i>
+              <i [ngClass]="{'disable': ceil(config.currentPage) === 1}" style="font-size: 30px; color: #a5f; margin: 0 15px" class="fas fa-hand-point-left" (click)="onPrevPage()" ></i>
+              <i [ngClass]="{'disable': ceil(config.currentPage) === ceil(config.totalItems / config.itemsPerPage)}" style="font-size: 30px; color: #a5f; margin: 0 15px" class="fas fa-hand-point-right" (click)="onNextPage()"></i>
+              <i [ngClass]="{'disable': ceil(config.currentPage) === ceil(config.totalItems / config.itemsPerPage)}" style="font-size: 30px; color: #a5f; margin: 0 15px" class="fas fa-hand-point-down" (click)="onGetLastPage()"></i>
+            </div>
+      </div>

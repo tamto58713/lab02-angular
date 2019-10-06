@@ -1,0 +1,8 @@
+.disable {
+    opacity: 0.3;
+}
+
+.active:after {
+    content: "▼";
+    color: rgb(33, 101, 228);
+}

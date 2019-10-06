@@ -1,5 +1,5 @@
 <app-change-ex-lab05></app-change-ex-lab05>
-<div class="card" style="width: 30%; margin-top: 15px">
+<div class="card" style="width: 40%; margin-top: 15px">
     <div class="card-header">
       Calculating reward for TET
     </div>
@@ -45,7 +45,7 @@
 
     <div class="card-footer">
         REWARD: 
-        <span *ngIf="!salary">0</span>
+        <span *ngIf="!salary">{{ 0 | currency:"VND"}}</span>
         <span *ngIf="salary && !groupAge">{{ salary | currency:"VND" }}</span>
         <span *ngIf="groupAge === '1'">{{ salary * 1.7 | currency:"VND" }}</span>
         <span *ngIf="groupAge === '2'">{{ salary * 2 | currency:"VND" }}</span>

@@ -33,6 +33,8 @@ import { Sen102Component } from './lab05/sen102/sen102.component';
 import { Sen2Component } from './lab05/sen2/sen2.component';
 import { Sen3Component } from './lab05/sen3/sen3.component';
 import { Sen4Component } from './lab05/sen4/sen4.component';
+import { Lab04Component } from './lab04/lab04.component';
+import { OrderModule } from 'ngx-order-pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,6 +65,7 @@ import { Sen4Component } from './lab05/sen4/sen4.component';
     Sen2Component,
     Sen3Component,
     Sen4Component,
+    Lab04Component,
   ],
   imports: [
     BrowserModule,
@@ -70,7 +73,8 @@ import { Sen4Component } from './lab05/sen4/sen4.component';
     Ng2SearchPipeModule,
     FormsModule,
     NgxPaginationModule,
-    RatingModule
+    RatingModule,
+    OrderModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
