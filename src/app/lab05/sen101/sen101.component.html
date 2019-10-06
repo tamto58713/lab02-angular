@@ -1,0 +1,24 @@
+<app-change-ex-lab05></app-change-ex-lab05>
+<div class="sen101 container">
+    <form action="" >
+        <div class="form-group">
+            <label for="length">Length</label>
+            <input type="text" id="length" class="form-control" (input)="onLengthChange($event.target.value)">
+        </div>
+        <div class="form-group">
+            <label for="width">Width</label>
+            <input type="text" id="width" class="form-control" (input)="onWidthChange($event.target.value)">
+        </div>
+
+        <div class="form-group">
+            <label for="">Circumference</label>
+            <input type="text" class="form-control" [value]="(width + length) * 2" disabled>
+        </div>
+
+        <div class="form-group">
+            <label for="">Area</label>
+            <input type="text" class="form-control" [value]="width * length" disabled>
+        </div>
+
+    </form>
+</div>

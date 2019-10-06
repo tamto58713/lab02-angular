@@ -26,6 +26,13 @@ import { NavLab03Component } from './lab03/nav-lab03/nav-lab03.component';
 import { HomeLab03Component } from './lab03/home-lab03/home-lab03.component';
 import { DatailProductComponent } from './lab03/datail-product/datail-product.component';
 import { SideBarLab03Component } from './lab03/side-bar-lab03/side-bar-lab03.component';
+import { Sen101Component } from './lab05/sen101/sen101.component';
+import { ChangeExLab05Component } from './lab05/change-ex-lab05/change-ex-lab05.component';
+import { HomeLab05Component } from './lab05/home-lab05/home-lab05.component';
+import { Sen102Component } from './lab05/sen102/sen102.component';
+import { Sen2Component } from './lab05/sen2/sen2.component';
+import { Sen3Component } from './lab05/sen3/sen3.component';
+import { Sen4Component } from './lab05/sen4/sen4.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +55,14 @@ import { SideBarLab03Component } from './lab03/side-bar-lab03/side-bar-lab03.com
     NavLab03Component,
     HomeLab03Component,
     DatailProductComponent,
-    SideBarLab03Component
+    SideBarLab03Component,
+    Sen101Component,
+    ChangeExLab05Component,
+    HomeLab05Component,
+    Sen102Component,
+    Sen2Component,
+    Sen3Component,
+    Sen4Component,
   ],
   imports: [
     BrowserModule,

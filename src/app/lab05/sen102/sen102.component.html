@@ -1,0 +1,37 @@
+<app-change-ex-lab05></app-change-ex-lab05>
+<form  (ngSubmit)="onSubmit()"  >
+    <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="name" class="form-control" [(ngModel)]="name" required>
+    </div>
+    <div class="form-group">
+        <label for="birthday">Birthday</label>
+        <input type="date" id="birthday" name="name" class="form-control" [(ngModel)]="birthday" required>
+    </div>
+
+    <div class="form-group">
+        <label for="gender">Gender</label>
+            <select class="form-control" name="gender" [(ngModel)]="gender">
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+    </div>
+
+    <div class="form-group">
+        <label for="mark">Mark</label>
+        <input type="text" class="form-control" name="mark" [(ngModel)]="mark" id="mark" required>
+    </div>
+
+    <div class="result" *ngIf="errs.length > 0">
+        <div class="errs" *ngFor="let err of errs">
+            <div class="alert alert-danger">{{err}}</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Result</label>
+        <div class="alert" [ngClass]="{'alert-danger': result === 'Failed', 'alert-success': result === 'Passed'}" *ngIf="result !== ''">{{result}}!</div>
+    </div>
+    
+    <button class="btn btn-primary" type="submit">Submit</button>
+</form>

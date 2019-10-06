@@ -15,6 +15,12 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { HomeLab03Component } from './lab03/home-lab03/home-lab03.component';
 import { DatailProductComponent} from './lab03/datail-product/datail-product.component'
+import { Sen101Component } from './lab05/sen101/sen101.component';
+import { HomeLab05Component } from './lab05/home-lab05/home-lab05.component';
+import { Sen102Component } from './lab05/sen102/sen102.component';
+import { Sen2Component } from './lab05/sen2/sen2.component';
+import { Sen3Component } from './lab05/sen3/sen3.component';
+import { Sen4Component } from './lab05/sen4/sen4.component';
 const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'about', component: AboutComponent},
@@ -30,7 +36,13 @@ const routes: Routes = [
   { path: 'lab02/student/:id', component: DetailStudentComponent},
   { path: 'lab03', component: HomeLab03Component},
   { path: 'lab03/product/:id', component: DatailProductComponent},
-  { path: '**', component: WrongPathComponent}
+  { path: 'lab05', component: HomeLab05Component},
+  { path: 'lab05/exercise/1.1', component: Sen101Component},
+  { path: 'lab05/exercise/1.2', component: Sen102Component},
+  { path: 'lab05/exercise/2', component: Sen2Component},
+  { path: 'lab05/exercise/3', component: Sen3Component},
+  { path: 'lab05/exercise/4', component: Sen4Component},
+  { path: '**', component: WrongPathComponent}  
 ];
 
 @NgModule({
