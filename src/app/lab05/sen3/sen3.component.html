@@ -15,6 +15,7 @@
                 <tr *ngFor="let product of products">
                     <td>
                         <input type="checkbox" [(ngModel)]="checked[product.id]">
+                        {{product.name}}
                     </td>
                     <td>
                         <input [disabled]="!checked[product.id]" [id]="product.id" type="text" [(ngModel)]="quantity[product.id]"  (input)="onChange(product.id)">
