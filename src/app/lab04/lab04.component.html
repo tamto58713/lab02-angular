@@ -11,7 +11,7 @@
               <th [ngClass]="{'active': orderName === 'date'}" style="cursor: pointer" (click)="changeOrderBy('date')" >Date</th>
             </thead>
             <tbody>
-              <tr *ngFor="let product of listProducts | orderBy: orderName:'0' | paginate:config">
+              <tr *ngFor="let product of listProducts | orderBy: orderName | paginate:config">
                 <td style="text-transform: uppercase">{{ product.name }}</td>
                 <td>{{ product.price | currency }}</td>
                 <td>{{ product.discount * 100 }}%</td>
