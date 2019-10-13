@@ -11,7 +11,7 @@ export class FilmComponent implements OnInit {
   constructor(private http:HttpClient) { 
     
   }
-  films = {}
+  films = []
 
   loaded: Promise<boolean>
 
@@ -29,8 +29,8 @@ export class FilmComponent implements OnInit {
 
   async fetch(url) {
     return await new Promise((resolve, reject) => {
-      this.http.get(url).subscribe((data: any[]) => {
-        this.films = data
+      this.http.get(url).subscribe((data: {results: []}) => {
+        this.films = data.results
         console.log(this.films)
         resolve(this.films)
         this.loaded = Promise.resolve(true);

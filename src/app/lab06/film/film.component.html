@@ -16,12 +16,12 @@
         </div>
 </nav>
     <div class="content row" *ngIf="loaded | async; else loading">
-            <div class="card col-md-3 col-sm-4" *ngFor="let film of films.results" style="border: 1px solid #ddd; margin-bottom: 10px; padding: 0; margin: 1em; border-radius: 5px">
+            <div class="card col-md-3 col-sm-4" *ngFor="let film of films" style="border: 1px solid #ddd; margin-bottom: 10px; padding: 0; margin: 1em; border-radius: 5px">
                 <img src="https://picsum.photos/300/150" style="border-radius: 5px" class="card-img-top" alt="..." [routerLink]="'/lab06/' + film.episode_id">
                 <div class="card-body text-left" style="padding-left: 2px">
                     <h5 class="card-title text-primary mb-0">{{ film.title }}</h5>
-                    <p  style="font-style: italic" class="card-text mb-0" style="font-size: 0.8em">Director: {{ film.director }}</p>
-                    <p  style="font-style: italic" class="card-text mb-0" style="font-size: 0.8em">Producer: {{film.producer }}</p>
+                    <p  class="card-text mb-0" style="font-size: 0.8em">Director: {{ film.director }}</p>
+                    <p  class="card-text mb-0" style="font-size: 0.8em">Producer: {{film.producer }}</p>
             </div>
         </div>
        
