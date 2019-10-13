@@ -22,6 +22,8 @@ import { Sen2Component } from './lab05/sen2/sen2.component';
 import { Sen3Component } from './lab05/sen3/sen3.component';
 import { Sen4Component } from './lab05/sen4/sen4.component';
 import { Lab04Component } from './lab04/lab04.component';
+import { FilmComponent } from './lab06/film/film.component';
+import { DetailFilmComponent } from './lab06/detail-film/detail-film.component';
 const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'about', component: AboutComponent},
@@ -44,6 +46,8 @@ const routes: Routes = [
   { path: 'lab05/exercise/2', component: Sen2Component},
   { path: 'lab05/exercise/3', component: Sen3Component},
   { path: 'lab05/exercise/4', component: Sen4Component},
+  { path: 'lab06', component: FilmComponent},
+  { path: "lab06/:id", component: DetailFilmComponent},
   { path: '**', component: WrongPathComponent}  
 ];
 

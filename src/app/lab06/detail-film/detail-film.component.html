@@ -1,0 +1,24 @@
+<div class="content" *ngIf="loaded | async; else loading">
+        <a routerLink="/lab06">
+            <strong>
+                <span style="font-size: 25px;">&#x2190;</span>
+                Back
+            </strong>
+            </a>
+   <div class="card">
+        <div class="card-header">
+          {{ film.title }}
+        </div>
+        <div class="card-body row">
+          <div class="col-md-3"><img src=" https://picsum.photos/200" alt=""></div>
+          <p class="card-text col-md-8 offset-md-1">{{ film.opening_crawl }}</p>
+        </div>
+      </div>
+</div>
+
+<ng-template #loading>
+    <p>Loading</p> 
+    <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</ng-template>

@@ -35,6 +35,9 @@ import { Sen3Component } from './lab05/sen3/sen3.component';
 import { Sen4Component } from './lab05/sen4/sen4.component';
 import { Lab04Component } from './lab04/lab04.component';
 import { OrderModule } from 'ngx-order-pipe';
+import { FilmComponent } from './lab06/film/film.component';
+import { HttpClientModule }  from '@angular/common/http';
+import { DetailFilmComponent } from './lab06/detail-film/detail-film.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,6 +69,8 @@ import { OrderModule } from 'ngx-order-pipe';
     Sen3Component,
     Sen4Component,
     Lab04Component,
+    FilmComponent,
+    DetailFilmComponent,
   ],
   imports: [
     BrowserModule,
@@ -74,7 +79,8 @@ import { OrderModule } from 'ngx-order-pipe';
     FormsModule,
     NgxPaginationModule,
     RatingModule,
-    OrderModule 
+    OrderModule,
+    HttpClientModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
