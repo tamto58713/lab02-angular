@@ -80,9 +80,11 @@ export class Lab07Component implements OnInit {
   }
 
   onDelete(id) {
-    this.students = this.students.filter(student => {
-      return student.id !== id
-    })
+    let isDelete = confirm("Are you sure delete this student?") 
+    if (isDelete)
+      this.students = this.students.filter(student => {
+        return student.id !== id
+      })
   }
   ngOnInit() {
     this.isEdit =false
