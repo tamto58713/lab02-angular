@@ -37,7 +37,8 @@ import { Lab04Component } from './lab04/lab04.component';
 import { OrderModule } from 'ngx-order-pipe';
 import { FilmComponent } from './lab06/film/film.component';
 import { HttpClientModule }  from '@angular/common/http';
-import { DetailFilmComponent } from './lab06/detail-film/detail-film.component'
+import { DetailFilmComponent } from './lab06/detail-film/detail-film.component';
+import { Lab07Component } from './lab07/lab07.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,6 +72,7 @@ import { DetailFilmComponent } from './lab06/detail-film/detail-film.component'
     Lab04Component,
     FilmComponent,
     DetailFilmComponent,
+    Lab07Component,
   ],
   imports: [
     BrowserModule,

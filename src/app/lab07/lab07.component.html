@@ -1,0 +1,54 @@
+<div class="lab-07 container">
+    <form action="" class="student" *ngIf="isAdd || isEdit">
+        <h1 class="text-center title" *ngIf="isAdd">Add Student</h1>
+        <h1 class="text-center title" *ngIf="isEdit">Edit Student</h1>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input name="name" [(ngModel)]="currentStudent.name" type="text" placeholder="Name" class="form-control"> 
+        </div>
+        <div class="form-group">
+            <label for="birthday">Birthday</label>
+            <input  name="birthday" [(ngModel)]="currentStudent.birthday" type="date" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="mark">Mark</label>
+            <input  name="mark" [(ngModel)]="currentStudent.mark" type="text" placeholder="Name" class="form-control">
+        </div>
+        <div class="button-group" *ngIf="isAdd">
+            <button class="btn btn-primary" style="width: 100px; margin-left: 2px; margin-bottom: 5px" (click)="onAdd()">Add</button>
+            <button class="btn btn-danger" style="width: 100px; margin-left: 2px; margin-bottom: 5px" (click)="onCancel()">Cancel</button>
+        </div>
+        <div class="button-group" *ngIf="isEdit">
+            <button class="btn btn-primary" style="width: 100px; margin-left: 2px; margin-bottom: 5px" (click)="onSave()">Save</button>
+            <button class="btn btn-danger" style="width: 100px; margin-left: 2px; margin-bottom: 5px" (click)="onCancel()">Cancel</button>
+        </div>
+    </form>
+
+    <table class="table">
+            <thead>            
+                <th>#</th>
+                <th>Name</th>
+                <th>Birthday</th>
+                <th>Mark</th>
+                <th>Grade</th>
+                <th>Action</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let student of students">
+                    <td style="font-weight: bold;">{{ student.id }}</td>
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.birthday }}</td>
+                    <td>{{ student.mark }}</td>
+                    <td>{{ grade(student.mark) }}</td>
+                    <td>
+                        <div class="button-group">
+                            <button class="btn btn-primary" style="width: 70px" (click)="onEdit(student.id)">Edit</button>
+                            <button class="btn btn-danger" style="width: 70px" (click)="onDelete(student.id)">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-primary" *ngIf="!isAdd" (click)="add()">Add</button>
+</div>
