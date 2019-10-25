@@ -25,6 +25,10 @@ import { Lab04Component } from './lab04/lab04.component';
 import { FilmComponent } from './lab06/film/film.component';
 import { DetailFilmComponent } from './lab06/detail-film/detail-film.component';
 import { Lab07Component } from './lab07/lab07.component';
+import { CartLab08Component } from './lab08/cart-lab08/cart-lab08.component';
+import { HomeLab08Component } from './lab08/home-lab08/home-lab08.component';
+import { CheckoutLab08Component } from './lab08/checkout-lab08/checkout-lab08.component';
+import { DetailLab08Component } from './lab08/detail-lab08/detail-lab08.component';
 const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'about', component: AboutComponent},
@@ -50,6 +54,10 @@ const routes: Routes = [
   { path: 'lab06', component: FilmComponent},
   { path: "lab06/:id", component: DetailFilmComponent},
   { path: "lab07", component: Lab07Component},
+  { path: "lab08", component: HomeLab08Component },
+  { path: "lab08/cart", component: CartLab08Component },
+  { path: "lab08/checkout", component:CheckoutLab08Component},
+  { path: "lab08/detail/:id", component: DetailLab08Component},
   { path: '**', component: WrongPathComponent}  
 ];
 

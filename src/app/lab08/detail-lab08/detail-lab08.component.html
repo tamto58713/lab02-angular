@@ -1,0 +1,50 @@
+<h1>My Guitar Shop</h1>
+<div class="row">
+    <div class="col-3">
+        
+        <div>
+            <p class="mb-1 mt-3 text-warning">Link</p>
+            <div><a routerLink="/lab08/cart">View Cart</a></div>
+            <div><a routerLink="#">Login/Register</a></div>
+            <div><a routerLink="#">Home</a></div>
+        </div>
+
+       
+        <div>
+            <p class="mb-1 mt-3 text-warning">Categories</p>
+            <div><a routerLink="#">Guitar</a></div>
+            <div><a routerLink="#">Basses</a></div>
+            <div><a routerLink="#">Drums</a></div>
+        </div>
+
+        
+        <div>
+            <p class="mb-1 mt-3 text-warning">Temp Link</p>
+            <div><a routerLink="#">Admin</a></div>
+        </div>
+
+    </div>
+    <div class="col-9">
+        <p>Why do we use it?
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+        <h2 class="text-warning">
+            Featured products
+        </h2>
+        <div class="products">
+            <div *ngFor="let product of products" class="mt-4 row">
+                <div class="col-3 image">
+                    <img [src]="'assets/images/' + product.imageUrl" alt="" width=90% height=75%>
+                </div>
+                <div class="text col-9">
+                    <div class="name"><a routerLink="#">{{ product.productname }}</a></div>
+                    <div class="price"><span><strong>Peice: </strong></span>{{ product.price }}</div>
+                    <div class="description">
+                        {{ product.description }}
+                    </div>
+                </div>
+               
+            </div>
+
+        </div>
+        </div>
+</div>

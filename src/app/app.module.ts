@@ -38,7 +38,11 @@ import { OrderModule } from 'ngx-order-pipe';
 import { FilmComponent } from './lab06/film/film.component';
 import { HttpClientModule }  from '@angular/common/http';
 import { DetailFilmComponent } from './lab06/detail-film/detail-film.component';
-import { Lab07Component } from './lab07/lab07.component'
+import { Lab07Component } from './lab07/lab07.component';
+import { HomeLab08Component } from './lab08/home-lab08/home-lab08.component';
+import { DetailLab08Component } from './lab08/detail-lab08/detail-lab08.component';
+import { CartLab08Component } from './lab08/cart-lab08/cart-lab08.component';
+import { CheckoutLab08Component } from './lab08/checkout-lab08/checkout-lab08.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,6 +77,10 @@ import { Lab07Component } from './lab07/lab07.component'
     FilmComponent,
     DetailFilmComponent,
     Lab07Component,
+    HomeLab08Component,
+    DetailLab08Component,
+    CartLab08Component,
+    CheckoutLab08Component,
   ],
   imports: [
     BrowserModule,
