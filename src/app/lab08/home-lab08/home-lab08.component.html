@@ -36,7 +36,7 @@
                     <img [src]="'assets/images/' + product.imageUrl" alt="" width=90% height=75%>
                 </div>
                 <div class="text col-9">
-                    <div class="name"><a routerLink="#">{{ product.productname }}</a></div>
+                    <div class="name"><a [routerLink]="'/lab08/detail/'+product.id">{{ product.productname }}</a></div>
                     <div class="price"><span><strong>Peice: </strong></span>{{ product.price }}</div>
                     <div class="description">
                         {{ product.description }}
